@@ -1,43 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template project</title>
-  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-  <link rel="stylesheet" href="./css/main.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Template project</title>
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <script async src="./js/main.js"></script>
+  </head>
+  <body>
+    <!-- Site main start -->
 
+    <main class="site-main">
+      <!-- Hero section start -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <ul class="hero__cities-list"></ul>
+            <form class="site-form">
+              <input
+                class="form-input"
+                type="text"
+                placeholder="Search any country..."
+              />
+            </form>
+            <div class="search-wrapper"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero section finish -->
+    </main>
 
-  <!-- Site header start -->
-  <header class="site-header">
-    <!-- Your header code here -->
-  </header>
-  <!-- Site header finish -->
+    <!-- Site main finish -->
 
-  <!-- Site main start -->
+    <!-- Template -->
+    <template class="country-template">
+      <li class="hero__cities-item">
+        <h3 class="hero__city-title">Tashkent</h3>
+        <div class="hero__temp-wrapper">
+          <img
+            class="hero__country-temp-img"
+            src="./images/icons/sunrise.png "
+            alt="weather condition image"
+            width="30"
+            height="30"
+          />
+          <p class="hero__city-temp">
+            <span class="hero__city-tem-num"></span><sup>o</sup>C
+          </p>
+        </div>
+        <div class="hero__sun-wrapper">
+          <time class="sun-time sunrise">06:00</time>
+          <time class="sun-time sunset">18:00</time>
+        </div>
+        <a class="hero__country-link" href="" target="_blank">See on map</a>
+      </li>
+    </template>
 
-  <main class="site-main">
-
-    <!-- Hero section start -->
-    <section class="hero">
-      <!-- Your hero section code here -->
-    </section>
-    <!-- Hero section finish -->
-
-  </main>
-
-  <!-- Site main finish -->
-
-  <!-- Site footer start -->
-
-  <footer class="site-footer">
-    <!-- Your footer code here -->
-  </footer>
-
-  <!-- Site footer finish -->
-</body>
+    <template class="search-template">
+      <div class="search-left">
+        <img class="search-left__img" src="" alt="country weather image" />
+        <span class="search-left__condition"></span>
+        <h3 class="search-left__country-title"></h3>
+        <p class="search-left__tem">
+          <span class="search-left__num"></span>
+          <sup>o</sup>C
+        </p>
+      </div>
+      <div class="search-right">
+        <ul class="search-right__list">
+          <li class="search-right__item">
+            <p class="search-right__text text-humidity">humidity</p>
+            <span class="search-right__num num-humidity"></span>
+          </li>
+          <li class="search-right__item">
+            <p class="search-right__text text-pressure">pressure</p>
+            <span class="search-right__num num-pressure"></span>
+          </li>
+          <li class="search-right__item">
+            <p class="search-right__text text-speed">speed</p>
+            <span class="search-right__num num-speed"></span>
+          </li>
+        </ul>
+      </div>
+    </template>
+  </body>
 </html>
